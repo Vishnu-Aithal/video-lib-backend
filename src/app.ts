@@ -34,7 +34,6 @@ mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {
         app.listen(3000);
-        console.log("listening");
     })
 
     .catch((err) => console.log(err));
