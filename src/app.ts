@@ -33,7 +33,7 @@ app.get("/", (req, res) => res.json({ test: "hello" }));
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {
-        app.listen(3000);
+        app.listen(process.env.PORT || 3000);
     })
 
     .catch((err) => console.log(err));
