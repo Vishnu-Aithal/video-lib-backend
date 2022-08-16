@@ -29,7 +29,7 @@ app.use(playlistRouter);
 
 app.use(errorHandling);
 
-app.get("/", (req, res) => res.json({ test: "hello" }));
+app.get("/video-lib/", (req, res) => res.json({ backend: "video-lib" }));
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {
