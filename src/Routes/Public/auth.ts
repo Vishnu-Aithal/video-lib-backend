@@ -3,6 +3,7 @@ import { User } from "../../Models/User";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { errorMessageWithCode } from "../../Utils/errorMessageWithCode";
+import { getNow } from "../../Utils/getNow";
 
 export const authRouter = Router();
 
@@ -45,8 +46,8 @@ const addNewUser: Handler = async (req, res, next) => {
             email,
             password: hashedpassword,
             ...rest,
-            createdAt: new Date().toLocaleString(),
-            updatedAt: new Date().toLocaleString(),
+            createdAt: getNow(),
+            updatedAt: getNow(),
         });
         const encodedToken = jwt.sign(
             user._id.toString(),
