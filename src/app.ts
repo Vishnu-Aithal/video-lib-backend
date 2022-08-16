@@ -11,6 +11,7 @@ import { watchlaterRouter } from "./Routes/Private/watchlater";
 import { historyRouter } from "./Routes/Private/history";
 import { playlistRouter } from "./Routes/Private/playlist";
 import { errorHandling } from "./Middlewares/errorHandling";
+import { commentsRouter } from "./Routes/Private/comments";
 
 const JSONParser = express.json();
 const app = express();
@@ -26,6 +27,7 @@ app.use(likesRouter);
 app.use(watchlaterRouter);
 app.use(historyRouter);
 app.use(playlistRouter);
+app.use(commentsRouter);
 
 app.use(errorHandling);
 
