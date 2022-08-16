@@ -52,10 +52,10 @@ const deleteVideoFromLikes: Handler = async (req, res, next) => {
 };
 
 likesRouter
-    .route("/api/user/likes")
+    .route("/video-lib/api/user/likes")
     .get(verifyAuth, getLikedVideos)
     .post(verifyAuth, addVideotoLikes);
 
 likesRouter
-    .route("/api/user/likes/:videoId")
+    .route("/video-lib/api/user/likes/:videoId")
     .delete(verifyAuth, deleteVideoFromLikes);

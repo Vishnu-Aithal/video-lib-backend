@@ -116,16 +116,16 @@ const deleteVideoFromPlaylist: Handler = async (req, res, next) => {
 };
 
 playlistRouter
-    .route("/api/user/playlists")
+    .route("/video-lib/api/user/playlists")
     .get(verifyAuth, getAllPlaylists)
     .post(verifyAuth, addNewPlaylist);
 
 playlistRouter
-    .route("/api/user/playlists/:playlistId")
+    .route("/video-lib/api/user/playlists/:playlistId")
     .delete(verifyAuth, deletePlaylist)
     .get(verifyAuth, getSinglePlaylist)
     .post(verifyAuth, addVideotoPlaylist);
 
 playlistRouter
-    .route("/api/user/playlists/:playlistId/:videoId")
+    .route("/video-lib/api/user/playlists/:playlistId/:videoId")
     .delete(verifyAuth, deleteVideoFromPlaylist);

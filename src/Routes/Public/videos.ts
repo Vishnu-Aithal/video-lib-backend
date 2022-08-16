@@ -23,5 +23,5 @@ const getSingleVideo: Handler = async (req, res) => {
     }
 };
 
-videosRouter.route("/api/videos").get(getAllVideos);
-videosRouter.route("/api/videos/:videoId").get(getSingleVideo);
+videosRouter.route("/video-lib/api/videos").get(getAllVideos);
+videosRouter.route("/video-lib/api/videos/:videoId").get(getSingleVideo);

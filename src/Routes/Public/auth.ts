@@ -59,6 +59,6 @@ const addNewUser: Handler = async (req, res, next) => {
     }
 };
 
-authRouter.route("/api/auth/login").post(loginUser);
+authRouter.route("/video-lib/api/auth/login").post(loginUser);
 
-authRouter.route("/api/auth/signup").post(addNewUser);
+authRouter.route("/video-lib/api/auth/signup").post(addNewUser);

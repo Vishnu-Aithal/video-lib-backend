@@ -13,4 +13,4 @@ const getAllCategories: Handler = async (req, res) => {
     }
 };
 
-categoriesRouter.route("/api/categories").get(getAllCategories);
+categoriesRouter.route("/video-lib/api/categories").get(getAllCategories);

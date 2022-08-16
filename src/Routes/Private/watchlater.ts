@@ -51,10 +51,10 @@ const deleteVideoFromWatchlater: Handler = async (req, res, next) => {
 };
 
 watchlaterRouter
-    .route("/api/user/watchlater")
+    .route("/video-lib/api/user/watchlater")
     .get(verifyAuth, getWatchlaterVideos)
     .post(verifyAuth, addVideotoWatchlater);
 
 watchlaterRouter
-    .route("/api/user/watchlater/:videoId")
+    .route("/video-lib/api/user/watchlater/:videoId")
     .delete(verifyAuth, deleteVideoFromWatchlater);

@@ -52,10 +52,10 @@ const deleteVideoFromHistory: Handler = async (req, res, next) => {
 };
 
 historyRouter
-    .route("/api/user/history")
+    .route("/video-lib/api/user/history")
     .get(verifyAuth, getVideosFromHistory)
     .post(verifyAuth, addVideoToHistory);
 
 historyRouter
-    .route("/api/user/history/:videoId")
+    .route("/video-lib/api/user/history/:videoId")
     .delete(verifyAuth, deleteVideoFromHistory);
